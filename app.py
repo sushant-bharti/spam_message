@@ -52,6 +52,9 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
+nltk.download('punkt')
+nltk.download('stopwords')
+
 ps = PorterStemmer()
 
 # Page settings
@@ -164,4 +167,5 @@ if st.button("🔍 Predict"):
     if result == 1:
         st.error("🚨 Spam Message Detected")
     else:
+
         st.success("✅ This is Not Spam")
